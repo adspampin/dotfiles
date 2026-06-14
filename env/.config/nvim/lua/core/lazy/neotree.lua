@@ -25,7 +25,7 @@ return {
             },
             window = {
                 position = "left",
-                width = 30,
+                width = 40,
                 mapping_options = {
                     noremap = true,
                     nowait = true,
@@ -45,6 +45,38 @@ return {
                     enabled = true,
                 },
                 use_libuv_file_watcher = true,
+                renderers = {
+                    directory = {
+                        { "indent" },
+                        { "icon" },
+                        { "name", zindex = 10 },
+                        { "diagnostics", errors_only = true, zindex = 20, align = "right", hide_when_expanded = true },
+                        { "git_status", zindex = 20, align = "right", hide_when_expanded = true },
+                    },
+                    file = {
+                        { "indent" },
+                        { "icon" },
+                        { "name", zindex = 10 },
+                        { "type", zindex = 10, align = "right" },
+                        { "file_size", zindex = 10, align = "right" },
+                        { "last_modified", zindex = 10, align = "right" },
+                        { "diagnostics", zindex = 20, align = "right" },
+                        { "git_status", zindex = 20, align = "right" },
+                    },
+                },
+            },
+            buffers = {
+                renderers = {
+                    file = {
+                        { "indent" },
+                        { "icon" },
+                        { "name", zindex = 10 },
+                        { "bufnr", zindex = 10, align = "right" },
+                        { "modified", zindex = 20, align = "right" },
+                        { "diagnostics", zindex = 20, align = "right" },
+                        { "git_status", zindex = 20, align = "right" },
+                    },
+                },
             },
             default_component_configs = {
                 indent = {
@@ -86,6 +118,19 @@ return {
                         staged = "",
                         conflict = "",
                     },
+                },
+                file_size = {
+                    enabled = true,
+                    required_width = 20,
+                },
+                last_modified = {
+                    enabled = true,
+                    required_width = 30,
+                    format = "%Y-%m-%d %H:%M",
+                },
+                type = {
+                    enabled = true,
+                    required_width = 20,
                 },
             },
         })
