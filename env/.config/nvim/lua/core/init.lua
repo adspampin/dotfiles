@@ -78,3 +78,13 @@ autocmd('LspAttach', {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+-- Auto-open neo-tree on startup when no file is specified
+autocmd("VimEnter", {
+    group = NatoGroup,
+    callback = function()
+        if vim.fn.argc() == 0 and vim.fn.line2byte("$") == -1 then
+            vim.cmd("Neotree show")
+        end
+    end,
+})
