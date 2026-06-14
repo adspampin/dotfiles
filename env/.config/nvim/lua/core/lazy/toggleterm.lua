@@ -8,13 +8,21 @@ return {
             hide_numbers = true,
             shade_filetypes = {},
             shade_terminals = true,
-            shading_factor = 2,
+            shading_factor = 1,
             start_in_insert = true,
             insert_mappings = true,
             persist_size = true,
             direction = "horizontal",
             close_on_exit = true,
             shell = vim.o.shell,
+            float_opts = {
+                border = "rounded",
+                winblend = 0,
+            },
+            highlights = {
+                StatusLine = { guibg = "none" },
+                StatusLineNC = { guibg = "none" },
+            },
         })
 
         -- Terminal keymaps for normal mode inside terminal

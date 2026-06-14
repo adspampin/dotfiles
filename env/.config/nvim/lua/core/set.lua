@@ -29,3 +29,11 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- Cleaner UI
+vim.opt.fillchars = { eob = " " }           -- remove ~ at end of buffer
+vim.opt.laststatus = 3                        -- one global statusline
+vim.opt.showmode = false                      -- don't show --INSERT--
+vim.opt.cursorline = true                     -- subtle current line highlight
+vim.opt.splitright = true                     -- open vertical splits to the right
+vim.opt.splitbelow = true                     -- open horizontal splits below

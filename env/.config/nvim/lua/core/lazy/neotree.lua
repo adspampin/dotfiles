@@ -11,12 +11,21 @@ return {
             close_if_last_window = true,
             enable_git_status = true,
             enable_diagnostics = true,
+            popup_border_style = "rounded",
+            source_selector = {
+                winbar = false,
+                statusline = false,
+            },
             window = {
                 position = "left",
                 width = 30,
                 mapping_options = {
                     noremap = true,
                     nowait = true,
+                },
+                mappings = {
+                    ["S"] = "open_split",
+                    ["s"] = "open_vsplit",
                 },
             },
             filesystem = {
@@ -32,7 +41,37 @@ return {
             },
             default_component_configs = {
                 indent = {
-                    with_expanders = true,
+                    with_expanders = false,
+                    indent_size = 1,
+                },
+                icon = {
+                    folder_closed = "",
+                    folder_open = "",
+                    folder_empty = "",
+                    default = "",
+                    highlight = "NeoTreeFileIcon",
+                },
+                modified = {
+                    symbol = "",
+                    highlight = "NeoTreeModified",
+                },
+                name = {
+                    trailing_slash = false,
+                    use_git_status_colors = true,
+                    highlight = "NeoTreeFileName",
+                },
+                git_status = {
+                    symbols = {
+                        added = "",
+                        modified = "",
+                        deleted = "",
+                        renamed = "",
+                        untracked = "",
+                        ignored = "",
+                        unstaged = "",
+                        staged = "",
+                        conflict = "",
+                    },
                 },
             },
         })
