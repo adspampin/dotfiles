@@ -87,3 +87,9 @@ copy "$DEV_ENV/env/.tmux-sessionizer" "$HOME/.tmux-sessionizer"
 copy "$DEV_ENV/dev-env" "$HOME/.local/scripts/dev-env"
 
 log "✅ Dev environment installed."
+
+# Reload hyprland if running (and not in dry-run)
+if [[ "$dry_run" == "0" ]] && command -v hyprctl &> /dev/null; then
+    log "reloading hyprland"
+    hyprctl reload &> /dev/null || true
+fi
