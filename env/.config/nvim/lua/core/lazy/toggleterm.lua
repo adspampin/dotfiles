@@ -7,8 +7,7 @@ return {
             open_mapping = [[<c-\>]],
             hide_numbers = true,
             shade_filetypes = {},
-            shade_terminals = true,
-            shading_factor = 1,
+            shade_terminals = false,
             start_in_insert = true,
             insert_mappings = true,
             persist_size = true,
@@ -18,6 +17,11 @@ return {
             float_opts = {
                 border = "rounded",
                 winblend = 0,
+            },
+            highlights = {
+                Normal = { guibg = "#16161e" },
+                NormalFloat = { guibg = "#16161e" },
+                FloatBorder = { guifg = "#c084fc", guibg = "#16161e" },
             },
         })
 

@@ -31,7 +31,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 -- Cleaner UI
-vim.opt.fillchars = { eob = " " }           -- remove ~ at end of buffer
+vim.opt.fillchars = { eob = " ", vert = "▎", horiz = "▬" }  -- visible separators
 vim.opt.laststatus = 3                        -- one global statusline
 vim.opt.showmode = false                      -- don't show --INSERT--
 vim.opt.cursorline = true                     -- subtle current line highlight

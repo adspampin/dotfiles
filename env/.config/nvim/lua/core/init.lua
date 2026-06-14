@@ -88,3 +88,18 @@ autocmd("VimEnter", {
         end
     end,
 })
+
+-- Active window border highlight (VS Code-like feel)
+autocmd("WinEnter", {
+    group = NatoGroup,
+    callback = function()
+        vim.opt_local.winhighlight = "Normal:Normal,WinSeparator:WinSeparator"
+    end,
+})
+
+autocmd("WinLeave", {
+    group = NatoGroup,
+    callback = function()
+        vim.opt_local.winhighlight = "Normal:NormalNC,WinSeparator:WinSeparator"
+    end,
+})

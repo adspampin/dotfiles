@@ -25,7 +25,7 @@ return {
             },
             window = {
                 position = "left",
-                width = 40,
+                width = 35,
                 mapping_options = {
                     noremap = true,
                     nowait = true,
@@ -45,6 +45,7 @@ return {
                     enabled = true,
                 },
                 use_libuv_file_watcher = true,
+                group_empty_dirs = true,
                 renderers = {
                     directory = {
                         { "indent" },
@@ -57,9 +58,6 @@ return {
                         { "indent" },
                         { "icon" },
                         { "name", zindex = 10 },
-                        { "type", zindex = 10, align = "right" },
-                        { "file_size", zindex = 10, align = "right" },
-                        { "last_modified", zindex = 10, align = "right" },
                         { "diagnostics", zindex = 20, align = "right" },
                         { "git_status", zindex = 20, align = "right" },
                     },
@@ -118,19 +116,6 @@ return {
                         staged = "",
                         conflict = "",
                     },
-                },
-                file_size = {
-                    enabled = true,
-                    required_width = 20,
-                },
-                last_modified = {
-                    enabled = true,
-                    required_width = 30,
-                    format = "%Y-%m-%d %H:%M",
-                },
-                type = {
-                    enabled = true,
-                    required_width = 20,
                 },
             },
         })
