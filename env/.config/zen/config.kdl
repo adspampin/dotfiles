@@ -1,0 +1,19 @@
+theme "dark"
+
+# Set tabs (buttons on the home page / new tab)
+set "GitHub" {
+  url "https://github.com"
+}
+
+set "YouTube" {
+  url "https://youtube.com"
+}
+
+set "ChatGPT" {
+  url "https://chat.openai.com"
+}
+
+set "Notion" {
+  url "https://notion.so"
+}
+

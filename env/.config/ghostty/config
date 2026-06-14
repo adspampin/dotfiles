@@ -1,0 +1,5 @@
+# Ghostty Terminal Configuration
+
+# Window padding (space around the terminal content)
+window-padding-x = 15
+window-padding-y = 15

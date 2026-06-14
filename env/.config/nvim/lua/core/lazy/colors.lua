@@ -5,12 +5,12 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "none" })
-	vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#1a1b26", bg = "none" })
+	vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#3b4261", bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 	vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1f2335" })
+	vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#565f89", bg = "none" })
+	vim.api.nvim_set_hl(0, "VertSplit", { fg = "#3b4261", bg = "none" })
 end
 
 return {

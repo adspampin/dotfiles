@@ -13,8 +13,15 @@ return {
             enable_diagnostics = true,
             popup_border_style = "rounded",
             source_selector = {
-                winbar = false,
-                statusline = false,
+                winbar = true,
+                content_layout = "center",
+                tabs_layout = "equal",
+                show_separator_on_edge = true,
+                sources = {
+                    { source = "filesystem", display_name = "  " },
+                    { source = "buffers", display_name = "  " },
+                    { source = "git_status", display_name = "  " },
+                },
             },
             window = {
                 position = "left",
@@ -41,13 +48,21 @@ return {
             },
             default_component_configs = {
                 indent = {
-                    with_expanders = false,
-                    indent_size = 1,
+                    with_expanders = true,
+                    indent_size = 2,
+                    padding = 1,
+                    with_markers = true,
+                    indent_marker = "│",
+                    last_indent_marker = "└",
+                    expander_collapsed = "",
+                    expander_expanded = "",
+                    expander_highlight = "NeoTreeExpander",
                 },
                 icon = {
                     folder_closed = "",
                     folder_open = "",
                     folder_empty = "",
+                    folder_empty_open = "",
                     default = "",
                     highlight = "NeoTreeFileIcon",
                 },
@@ -63,7 +78,6 @@ return {
                 git_status = {
                     symbols = {
                         added = "",
-                        modified = "",
                         deleted = "",
                         renamed = "",
                         untracked = "",

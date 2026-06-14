@@ -19,10 +19,6 @@ return {
                 border = "rounded",
                 winblend = 0,
             },
-            highlights = {
-                StatusLine = { guibg = "none" },
-                StatusLineNC = { guibg = "none" },
-            },
         })
 
         -- Terminal keymaps for normal mode inside terminal
